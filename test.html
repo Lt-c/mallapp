@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试</title>
+</head>
+
+<body>
+  <button id="login">发送</button>
+
+  <script>
+    var
+      email = 'sqdwx0@163.com',
+      password = 'ASDasd.000'
+    oBtn = document.getElementById('login');
+
+    oBtn.onclick = function (){
+      return loginIn(email,password)
+    };
+    
+
+    function loginIn(email,password) {
+      var xtp = new XMLHttpRequest();
+      xtp.open('GET', `http://124.70.30.161:3000/login?email=${email}&password=${password}`)
+      xtp.withCredentials = true;// 此设置允许跨域访问
+      xtp.send()
+      console.log(xtp)
+    }
+
+
+
+    // 获取二维码 key 生成接口
+    function getQrKey(){
+      var
+        time = + new Date() 
+        xtp = new XMLHttpRequest();
+      xtp.open('GET','http://124.70.30.161:3000/login/qr/key?')
+      xtp.withCredentials = true;// 此设置允许跨域访问
+      xtp.send()
+      console.log(xtp)
+    }
+  </script>
+</body>
+
+</html>
