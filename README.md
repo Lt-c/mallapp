@@ -1,24 +1,17 @@
-# mallapp
+# 一个电商网站 demo
 
 ## Project setup
 ```
-npm install
+npm install  // 安装项目依赖
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run serve // 运行 
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run build // 编译打包 生成dist文件
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
